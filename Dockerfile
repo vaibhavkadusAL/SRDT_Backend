@@ -1,14 +1,17 @@
-# Use OpenJDK image
+# Use OpenJDK base image
 FROM openjdk:17-jdk-slim
 
 # Set working directory
 WORKDIR /app
 
-# Copy all files into the container
+# Copy everything
 COPY . .
 
-# Build the app
-RUN ./mvnw clean install
+# Ensure Maven wrapper is executable
+RUN chmod +x mvnw
 
-# Run the app
+# Build the project
+RUN ./mvnw clean install -DskipTests
+
+# Run the JAR (adjust the jar name as needed)
 CMD ["java", "-jar", "target/srdt-backend.jar"]
