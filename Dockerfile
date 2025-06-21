@@ -4,14 +4,14 @@ FROM openjdk:17-jdk-slim
 # Set working directory
 WORKDIR /app
 
-# Copy everything
+# Copy all files into the container
 COPY . .
 
-# Ensure Maven wrapper is executable
+# Make Maven wrapper executable (for Linux)
 RUN chmod +x mvnw
 
-# Build the project
+# Build the Spring Boot project
 RUN ./mvnw clean install -DskipTests
 
-# Run the JAR (adjust the jar name as needed)
-CMD ["java", "-jar", "target/srdt-backend.jar"]
+# Run the generated JAR
+CMD ["java", "-jar", "target/contact-0.0.1-SNAPSHOT.jar"]
