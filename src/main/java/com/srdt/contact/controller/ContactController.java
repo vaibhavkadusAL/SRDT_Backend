@@ -33,7 +33,7 @@ public class ContactController {
 
         try {
             SimpleMailMessage message = new SimpleMailMessage();
-            message.setTo("abhishekmahajan@alphaseam.com");
+            message.setTo("info.sairuraldevelopmenttrust@gmail.com");
             message.setSubject("New Contact Us Message from: " + form.getName());
             message.setText(
                     "Name: " + form.getName() + "\n" +
