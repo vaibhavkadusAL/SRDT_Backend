@@ -1,0 +1,16 @@
+# compiled files
+target/
+*.class
+ 
+# logs
+*.log
+ 
+# environment/config files
+.env
+application.properties
+application.yml
+ 
+# IDE files
+.idea/
+*.iml
+.vscode/
