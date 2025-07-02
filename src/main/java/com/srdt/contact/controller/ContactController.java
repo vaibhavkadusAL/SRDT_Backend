@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/api/contact")
 @CrossOrigin(origins = {
         "http://localhost:5173",                     // Local development
-        "https://frontend-srdt-nine.vercel.app/"          // ✅ Deployed frontend on Vercel
+        "https://frontend-srdt-nine.vercel.app/"          //  Deployed frontend on Vercel // add link of deployed frontend i.e https://www.sairuraldevelopmenttrust.com/
 })
 public class ContactController {
 
